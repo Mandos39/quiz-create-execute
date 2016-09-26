@@ -1,3 +1,5 @@
+package quiz;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +12,8 @@ public class QuizApp extends JFrame implements ActionListener {
     public QuizApp() {
         super();
         add(new FirstPanel("Frase di rito", this));
-        //add(new QuestionPanel(3, "Quanti anni hai?", this));
+        //add(new ProvaForm(this).getPanel1());
+        //add(new quiz.QuestionPanel(3, "Quanti anni hai?", this));
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
         pack();
@@ -24,6 +27,7 @@ public class QuizApp extends JFrame implements ActionListener {
         if ("GoToQuestion".equals(e.getActionCommand())) {
             getContentPane().removeAll();
             add(new QuestionPanel(3, "Quanti anni hai?", this));
+            //add(new RitualForm().getPagnello());
             pack();
         }
 
